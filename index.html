@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo South Indian Food Stall</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.3eehDwIFNFsHBtBhJADJuwHaE7?w=250&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Neo South Indian</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="cart-icon">
+    🛒 <span id="cart-count">0</span> | Total: ₹<span id="cart-total">0</span>
+</div>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <h1>Welcome to Neo South Indian Food Stall</h1>
+        <p>Authentic flavors of South India at your fingertips</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="filters">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('breakfast')">Breakfast</button>
+            <button onclick="filterMenu('lunch')">Lunch</button>
+            <button onclick="filterMenu('snacks')">Snacks</button>
+            <button onclick="filterMenu('dessert')">Dessert</button>
+        </div>
+        <div class="menu-items" id="menu-items">
+            <!-- Menu items will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Neo South Indian Food Stall brings you the rich culinary heritage of South India. From crispy dosas to flavorful idlis, our recipes are authentic, fresh, and made with love. Perfect for quick bites or family meals!</p>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="South Indian Food">
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section id="order" class="order">
+        <h2>Place Your Order</h2>
+        <form id="order-form">
+            <input type="text" placeholder="Name" id="name" required>
+            <input type="tel" placeholder="Phone" id="phone" required>
+            <textarea placeholder="Order Details" id="details" required></textarea>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@neosouthindian.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: 123, Food Street, Chennai, India</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Neo South Indian Food Stall. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
