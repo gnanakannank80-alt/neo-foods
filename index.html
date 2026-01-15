@@ -14,9 +14,7 @@
             body: JSON.stringify({
               name: document.getElementById("name").value,
               phone: document.getElementById("phone").value,
-              item: document.getElementById("item").value,
-              quality: document.getElementById("qty").value,
-              message: document.getElementById("msg").value,
+              message: document.getElementById("details").value,
             })
             })
             .then(res=>res.json())
@@ -79,15 +77,11 @@
     <section id="order" class="order">
         <h2>Place Your Order</h2>
         <form id="order-form">
-            <input type="text" placeholder="Name" id="name" required>
-            <input type="tel" placeholder="Phone" id="phone" required>
-            <textarea placeholder="Order Details" id="details" required></textarea>
-            <button type="submit">Submit Order</button>
-            Name :<input id="name" placeholder="Name" /><br />
-    Phone no:<input id="phone" placeholder="Phone" /><br />
-    Message :<textarea id="msg"></textarea><br />
-
-    <button onclick="sendOrder()">Submit Order</button>
+            <input type="text" placeholder="Name" id="name" >
+            <input type="tel" placeholder="Phone" id="phone" >
+            <textarea placeholder="Order Details" id="details" ></textarea>
+            
+    <button type="submit" onclick="sendOrder()">Submit Order</button>
   </body>
         </form>
     </section>
@@ -108,5 +102,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
