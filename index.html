@@ -6,6 +6,25 @@
     <title>Neo South Indian Food Stall</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://th.bing.com/th/id/OIP.3eehDwIFNFsHBtBhJADJuwHaE7?w=250&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+     <script>
+      function sendOrder() {
+        fetch("https://script.google.com/macros/s/AKfycbw7crfb0lbQusPwltQ0TGpok2ef4AoFkuUWP1A9dQa3KkM52PdLtK367KLth2ahEfSVDw/exec",
+          {
+            method: "POST",
+            body: JSON.stringify({
+              name: document.getElementById("name").value,
+              phone: document.getElementById("phone").value,
+              item: document.getElementById("item").value,
+              quality: document.getElementById("qty").value,
+              message: document.getElementById("msg").value,
+            })
+            })
+            .then(res=>res.json())
+            .then(data=>alert("order susscess"))
+            .catch(err=>alert("error"))
+          }
+      
+    </script>
 </head>
 <body>
     <!-- HEADER -->
@@ -83,3 +102,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
